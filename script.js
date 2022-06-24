@@ -1,9 +1,7 @@
-console.log("test");
 
 
 
-
-
+let wheatherKey = config.myApiKey;
 
 const data = null;
 
@@ -17,9 +15,10 @@ xhr.addEventListener("readystatechange", function () {
 });
 
 xhr.open("GET", "https://weatherapi-com.p.rapidapi.com/current.json?q=Braila");
-xhr.setRequestHeader("X-RapidAPI-Key", "5ae7b41180msh097817e8ff237c7p10f974jsnc261e0995a5a");
+xhr.setRequestHeader("X-RapidAPI-Key", wheatherKey);
 xhr.setRequestHeader("X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com");
 
 xhr.send(data);
 
 console.log(data);
+
