@@ -15,13 +15,13 @@ function searchWeather() {
 
 			console.log(test);
 
-			output.innerHTML = `<h2>The weather in<br> ${test.location.name}, ${test.location.country}</h2>`;
-			output.innerHTML += `<h1 class="fw-bold">${test.current.temp_c}°C</h1>`;
-			output.innerHTML += `<h4 class="fw-lighter">Humidity of ${test.current.humidity}%</h4>`;
-			output.innerHTML += `<h4 class="fw-lighter">Feels like ${test.current.feelslike_c}°C</h4><hr>`;
+			output.innerHTML = `<h2>The weather in<br> ${test.location.name}, ${test.location.country} <hr></h2>`;
+			output.innerHTML += `<h1 class="fw-bold">${test.current.temp_c}°C <hr> </h1>`;
+			output.innerHTML += `<h4 class="fw-lighter">${test.current.condition.text}</h4>`;
+			output.innerHTML += `<h4 class="fw-lighter">Feels like ${test.current.feelslike_c}°C</h4>`;
+			output.innerHTML += `<h4 class="fw-lighter">Wind direction ${test.current.wind_dir}, <br> with ${test.current.wind_kph} Km/h</h4>`;
+			output.innerHTML += `<h4 class="fw-lighter">Humidity of ${test.current.humidity}% <hr></h4>`;
 			output.innerHTML += `<h6 class="fw-lighter fst-italic" >Last update at: ${test.location.localtime}</h6>`;
-
-
 		}
 
 	});
